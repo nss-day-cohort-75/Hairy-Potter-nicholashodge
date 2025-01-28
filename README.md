@@ -120,12 +120,12 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   > The toSellOrNotToSell function assigns all uncracked pottery a price based on its weight, and then adds it to a module level array named toSell. The PotteryList function goes through all of the objects in the toSell array and uses the object's properties to create an HTML string representation of the object, with each individual pottery object being it's own section under the potteryList article. The renderHTML function then targets the DOM element with id "potteryListId" and adds the compiled HTML string to the inner HTML property of the targeted element, injecting it into the DOM and displaying it on the browser after using the serve command in the terminal.
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/24d862479f64488bacf02df69bb84ebe?sid=ec422cd7-3734-4d09-864d-bc838dcf9836
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > PotteryWheel.js only has the function makePottery to help organize the code better by compartmentalizing the modules based on their responsibilites. The responsibility of PotteryWheel.js is to make the pottery, so it only needs the functions related to that. Kiln.js contains functions for modifying the pottery, PotteryCatalog.js contains functions about sorting the pottery, and PotteryList.js contains functions for displaying the pottery.
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > In the toSellOrNotToSell function in PotteryCatalog.js we would need to add an else statement to catch the cases where the pottery is cracked. Then we would set the price of that pottery to 2.50 and push it to the toSell array.
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > https://www.loom.com/share/d2b99ddc6b024734af3ba24f85732741?sid=1c35865e-0b68-4444-8b16-076e4b63efa8
